@@ -13,12 +13,16 @@ class MyApp(QMainWindow):
 
         self.ui.btnMenuExtract.clicked.connect(self.go_to_tab_1)
         self.ui.btnMenuGenerate.clicked.connect(self.go_to_tab_2)
-
+        
+        #Hiding tab
+        self.ui.tabWidget.tabBar().hide()
     def go_to_tab_1(self):
         self.ui.tabWidget.setCurrentIndex(0)
 
     def go_to_tab_2(self):
         self.ui.tabWidget.setCurrentIndex(1)
+
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
